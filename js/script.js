@@ -66,3 +66,37 @@
 // sumSalaries(objectArray)
 
 // EXERCISE 4
+
+const arr = [1, 2, 3, 4, 5]
+
+const twoDivisionTrue = [];
+
+const twoDivisionFalse = [];
+
+for (item in arr) {
+  const twoDivision = item % 2
+
+  if (twoDivision == 1) {
+    twoDivisionFalse.push(item)
+  } else if (twoDivision == 0) {
+    twoDivisionTrue.push(item)
+  }
+}
+
+console.log(twoDivisionTrue, twoDivisionFalse);
+
+const initialValue = 0;
+const sumTruDivision = twoDivisionTrue.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log(sumTruDivision);
+
+
+const sumFalseDivision = twoDivisionFalse.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log(sumFalseDivision);
